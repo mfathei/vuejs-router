@@ -15,7 +15,7 @@ export const routes = [{
     },
     {
         path: '/user',
-        components:{
+        components: {
             default: User,
             'header-bottom': Header
         },
@@ -33,5 +33,11 @@ export const routes = [{
                 name: 'editUser'
             }
         ]
+    },
+    {
+        path: '/redirect-me',
+        redirect: {
+            name: 'home'
+        }
     }
 ];
