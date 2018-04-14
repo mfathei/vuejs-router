@@ -19,6 +19,14 @@ export default {
         hash: "#data"
       }
     };
+  },
+  beforeRouteEnter(to, from, next) {
+    if (true) {
+      next();
+    } else {
+      console.log("You don't have permissions to view user details");
+      next(false);
+    }
   }
 };
 </script>

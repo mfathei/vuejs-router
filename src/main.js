@@ -26,6 +26,12 @@ const router = new VueRouter({
   }
 });
 
+router.beforeEach((to, from, next) => {
+  console.log("Global beforeEach");
+  // next('/'); redirect to home
+  next();
+});
+
 new Vue({
   el: '#app',
   router: router,
